@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InventoryMangment
 {
-    internal class Product :BaseEntity
+    public class MyProduct :BaseEntity
     {
           
         public string Name { get; set; }
@@ -19,10 +19,9 @@ namespace InventoryMangment
         {
             var isValid = true;
             if (String.IsNullOrWhiteSpace(Name)) isValid = false;
-            if (Price == null) isValid = false;
-            
+        
 
-            return IsValid;
+            return isValid;
         }
 
       

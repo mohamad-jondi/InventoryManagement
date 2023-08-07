@@ -1,7 +1,8 @@
 ﻿namespace InventoryMangment
 {
-    internal class ConsoleVirtualGUI
+    public class ConsoleVirtualGUI
     {
+        private InventoryManger Mangment= new InventoryManger();
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to this Mangment System, please choose what you want to do!");
@@ -19,7 +20,25 @@
                 switch (Choice)
                 {
                     case 1: 
-                        Console.WriteLine("Adding a new pruduct ");
+                        MyProduct product = new MyProduct();
+                        Console.WriteLine("Creating a new product ");
+                        Console.WriteLine("What is Your Product name ?");
+                        product.Name = Console.ReadLine();
+                        Console.WriteLine("What is the Price For This Product?");
+                        product.Price= Convert.ToDecimal(Console.ReadLine());
+                        Console.WriteLine("How many Products are there ?");
+                        product.Quantity = Convert.ToInt32(Console.ReadLine());
+                        try
+                        {
+                            Mangment.AddNewProduct(product);
+
+
+
+                        }
+                        catch (Exception e) { 
+                        Console.WriteLine(e.ToString());
+                        }
+                        
                         break;
                     case 2:
                         Console.WriteLine("View All Existing Products");
