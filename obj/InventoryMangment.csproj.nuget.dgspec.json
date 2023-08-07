@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moham\\Desktop\\TRAIN\\C#\\InventoryMangment\\InventoryMangment\\InventoryMangment.csproj": {}
+    "C:\\Users\\moham\\Desktop\\TRAIN\\C#\\InventoryManagement\\InventoryMangment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moham\\Desktop\\TRAIN\\C#\\InventoryMangment\\InventoryMangment\\InventoryMangment.csproj": {
+    "C:\\Users\\moham\\Desktop\\TRAIN\\C#\\InventoryManagement\\InventoryMangment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moham\\Desktop\\TRAIN\\C#\\InventoryMangment\\InventoryMangment\\InventoryMangment.csproj",
+        "projectUniqueName": "C:\\Users\\moham\\Desktop\\TRAIN\\C#\\InventoryManagement\\InventoryMangment.csproj",
         "projectName": "InventoryMangment",
-        "projectPath": "C:\\Users\\moham\\Desktop\\TRAIN\\C#\\InventoryMangment\\InventoryMangment\\InventoryMangment.csproj",
+        "projectPath": "C:\\Users\\moham\\Desktop\\TRAIN\\C#\\InventoryManagement\\InventoryMangment.csproj",
         "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moham\\Desktop\\TRAIN\\C#\\InventoryMangment\\InventoryMangment\\obj\\",
+        "outputPath": "C:\\Users\\moham\\Desktop\\TRAIN\\C#\\InventoryManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
