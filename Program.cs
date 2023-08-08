@@ -2,7 +2,7 @@
 {
     public class ConsoleVirtualGUI
     {
-        private InventoryManger Mangment= new InventoryManger();
+        private static ProductsRepo Mangment =  ProductsRepo.Instance;
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to this Mangment System, please choose what you want to do!");
@@ -31,12 +31,9 @@
                         try
                         {
                             Mangment.AddNewProduct(product);
-
-
-
                         }
                         catch (Exception e) { 
-                        Console.WriteLine(e.ToString());
+                        Console.WriteLine("please ensure that the data you entered are correct ");
                         }
                         
                         break;

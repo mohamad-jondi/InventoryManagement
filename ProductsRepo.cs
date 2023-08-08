@@ -8,16 +8,27 @@ using InventoryMangment;
 
 namespace InventoryMangment
 {
-    public class InventoryManger 
+    public sealed class ProductsRepo 
     {
+        
+            private ProductsRepo() { Products = new List<MyProduct>(); }
+            private static ProductsRepo instance = null;
+            public static ProductsRepo Instance
+            {
+                get
+                {
+                    if (instance == null)
+                    {
+                        instance = new ProductsRepo();
+                    }
+                    return instance;
+                }
+            }
+        
 
         private List<MyProduct> Products;
 
-        public InventoryManger()
-        {
-            Products = new List<MyProduct>();
-        }
-
+        
         public void AddNewProduct(MyProduct product)
         {
             if (product.IsValid) { Products.Add(product); }
