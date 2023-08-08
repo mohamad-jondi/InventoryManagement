@@ -28,6 +28,7 @@
                         product.Price= Convert.ToDecimal(Console.ReadLine());
                         Console.WriteLine("How many Products are there ?");
                         product.Quantity = Convert.ToInt32(Console.ReadLine());
+                        product.EntityOption = EntityStateOption.Active;
                         try
                         {
                             Mangment.AddNewProduct(product);
@@ -38,7 +39,15 @@
                         
                         break;
                     case 2:
-                        Console.WriteLine("View All Existing Products");
+
+                        Console.WriteLine("Viewing All Existing Products");
+                        foreach (var Product in Mangment.GetProducts())
+                        {
+                            var index = 0;
+                            if (Product.EntityOption ==EntityStateOption.Active)
+                            Console.WriteLine($"{index++}.{Product.Name} costs {Product.Price}$ and there is {Product.Quantity}");
+
+                            }
                         break;
                     case 3:
                         Console.WriteLine("3.Edit an Exisiting Product");
