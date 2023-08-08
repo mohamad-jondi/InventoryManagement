@@ -34,6 +34,24 @@ namespace InventoryMangment
             if (product.IsValid) { Products.Add(product); }
             else throw new Exception("something went wrong");
         }
+
+        public void EditExistingProduct(string name,string newName ="",decimal? price=null, int? numberOfItems =null) {
+            MyProduct productToEdit = Products.FirstOrDefault(p => p.Name == name);
+
+            if (productToEdit != null)
+            {
+                if (!string.IsNullOrEmpty(newName))productToEdit.Name = newName;
+                if (!price.Equals(null))productToEdit.Price = (decimal)price;
+                if (!numberOfItems.Equals(null))productToEdit.Quantity = (int)numberOfItems ;
+
+            }
+            else
+            {
+                throw new Exception("nothing to be found ");
+            }
+        }
+
+        
         public List<MyProduct> GetProducts() => Products;
 
 

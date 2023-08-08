@@ -50,7 +50,30 @@
                             }
                         break;
                     case 3:
-                        Console.WriteLine("3.Edit an Exisiting Product");
+                        Console.WriteLine("Edit an Existing Product");
+                        Console.WriteLine("Enter the name of the product you want to edit:");
+                        string productNameToEdit = Console.ReadLine();
+
+                        try
+                        {
+                            Console.WriteLine($"Editing {productNameToEdit}");
+                            Console.WriteLine("Enter new name (or press Enter to keep the same):");
+                            string newName = Console.ReadLine();
+                            Console.WriteLine("Enter new price (or press Enter to keep the same):");
+                            string newPriceString = Console.ReadLine();
+                            decimal? newPrice = !string.IsNullOrWhiteSpace(newPriceString) ? decimal.Parse(newPriceString) : (decimal?)null;
+                            Console.WriteLine("Enter new quantity (or press Enter to keep the same):");
+                            string newQuantityString = Console.ReadLine();
+                            int? newQuantity = !string.IsNullOrWhiteSpace(newQuantityString) ? int.Parse(newQuantityString) : (int?)null;
+
+                            Mangment.EditExistingProduct(productNameToEdit, newName, newPrice, newQuantity);
+                            Console.WriteLine("Product edited successfully.");
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine($"sorry No such product exist ");
+                        }
+
                         break;
                     case 4:
                         Console.WriteLine("4.Delete a Product");
